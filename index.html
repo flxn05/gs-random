@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Activity Picker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Activity Picker</h1>
+    <button onclick="displayRandomActivity()">Pick a Random Activity</button>
+    <div id="result"></div>
+
+    <script>
+        const activities = [
+            "Jenga",
+            "Werwolf",
+            "Länderball (draußen)",
+            "Mauer Spiel (draußen)",
+            "Räuber und Gendarm (draußen)",
+            "Beete angucken (draußen)",
+            "Wikingerschach (draußen)",
+            "Roboter (draußen)",
+            "Wer bin ich?",
+            "Activity",
+            "Scharade",
+            "Tick Tack Bumm",
+            "Uno",
+            "Verstecken im Dunkeln",
+            "Stadt Land Fluss",
+            "Zeitungsschlagen",
+            "Tischklatschspiel",
+            "Münzspiel",
+            "Malkette"
+        ];
+
+        function displayRandomActivity() {
+            const randomIndex = Math.floor(Math.random() * activities.length);
+            const randomActivity = activities[randomIndex];
+            document.getElementById('result').textContent = randomActivity;
+        }
+    </script>
+</body>
+</html>
